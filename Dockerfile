@@ -24,7 +24,10 @@ WORKDIR /app
 
 COPY --from=builder /app/target/release/x402-facilitator /usr/local/bin/x402-facilitator
 
+# КОПИРУЕМ КОНФИГ
+COPY config.json /app/config.json
+
 EXPOSE $PORT
 ENV RUST_LOG=info
 
-ENTRYPOINT ["x402-facilitator"]
+ENTRYPOINT ["x402-facilitator", "--config", "/app/config.json"]
