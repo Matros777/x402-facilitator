@@ -1,6 +1,7 @@
 {
   "port": 8080,
   "host": "0.0.0.0",
+  "log_level": "debug",
   "chains": {
     "eip155:8453": {
       "signers": ["$EVM_PRIVATE_KEY"],
@@ -16,9 +17,11 @@
   "schemes": [
     {
       "id": "v2-eip155-exact",
-      "chains": "eip155:*",
+      "chains": ["eip155:8453"],
+      "handler": "exact",
       "params": {
-        "max_timeout_seconds": 300
+        "max_timeout_seconds": 300,
+        "require_signature": true
       }
     }
   ]
