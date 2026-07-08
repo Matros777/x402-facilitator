@@ -1,0 +1,25 @@
+{
+  "port": 8080,
+  "host": "0.0.0.0",
+  "chains": {
+    "eip155:8453": {
+      "signers": ["$EVM_PRIVATE_KEY"],
+      "rpc": [
+        {
+          "http": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr"
+        }
+      ],
+      "eip1559": true,
+      "chain_id": 8453
+    }
+  },
+  "schemes": [
+    {
+      "id": "v2-eip155-exact",
+      "chains": "eip155:*",
+      "params": {
+        "max_timeout_seconds": 300
+      }
+    }
+  ]
+}
