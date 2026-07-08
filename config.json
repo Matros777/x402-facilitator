@@ -17,12 +17,16 @@
   "schemes": [
     {
       "id": "v2-eip155-exact",
-      "chains": ["eip155:8453"],
+      "chains": "eip155:8453",
       "handler": "exact",
       "params": {
         "max_timeout_seconds": 300,
         "require_signature": true
       }
     }
-  ]
+  ],
+  "facilitator": {
+    "enabled": true,
+    "default_chain": "eip155:8453"
+  }
 }
