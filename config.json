@@ -3,7 +3,7 @@
   "host": "0.0.0.0",
   "log_level": "debug",
   "chains": {
-    "base": {
+    "eip155:8453": {
       "rpc": "$RPC_URL_BASE",
       "signer": "$EVM_PRIVATE_KEY",
       "chainId": 8453,
