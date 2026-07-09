@@ -20,5 +20,9 @@
         "require_signature": true
       }
     }
-  ]
+  ],
+  "facilitator": {
+    "enabled": true,
+    "default_chain": "eip155:8453"
+  }
 }
