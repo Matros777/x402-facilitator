@@ -1,31 +1,24 @@
-{
-  "port": 8080,
+"port": 8080,
   "host": "0.0.0.0",
-  "log_level": "debug",
   "chains": {
     "eip155:8453": {
-      "rpc": ["$RPC_URL_BASE"],
       "signers": ["$EVM_PRIVATE_KEY"],
-      "chainId": 8453,
-      "eip1559": true
+      "rpc": [
+        {
+          "http": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr"
+        }
+      ],
+      "eip1559": true,
+      "chain_id": 8453
     }
   },
   "schemes": [
     {
       "id": "v2-eip155-exact",
-      "chains": ["eip155:8453"],
-      "handler": "exact",
+      "chains": "eip155:*",
       "params": {
-        "max_timeout_seconds": 300,
-        "require_signature": true
+        "max_timeout_seconds": 300
       }
     }
-  ],
-  "tokens": {
-    "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913": {
-      "symbol": "USDC",
-      "decimals": 6,
-      "chain": "eip155:8453"
-    }
-  }
+  ]
 }
