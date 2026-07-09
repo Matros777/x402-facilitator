@@ -3,30 +3,22 @@
   "host": "0.0.0.0",
   "log_level": "debug",
   "chains": {
-    "eip155:8453": {
-      "signers": ["$EVM_PRIVATE_KEY"],
-      "rpc": [
-        {
-          "http": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr"
-        }
-      ],
-      "eip1559": true,
-      "chain_id": 8453
+    "base": {
+      "rpc": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr",
+      "signer": "$EVM_PRIVATE_KEY",
+      "chainId": 8453,
+      "eip1559": true
     }
   },
   "schemes": [
     {
       "id": "v2-eip155-exact",
-      "chains": "eip155:8453",
+      "chains": ["eip155:8453"],
       "handler": "exact",
       "params": {
         "max_timeout_seconds": 300,
         "require_signature": true
       }
     }
-  ],
-  "facilitator": {
-    "enabled": true,
-    "default_chain": "eip155:8453"
-  }
+  ]
 }
