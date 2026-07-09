@@ -4,7 +4,7 @@
   "log_level": "debug",
   "chains": {
     "eip155:8453": {
-      "signer": "$EVM_PRIVATE_KEY",
+      "signers": ["$EVM_PRIVATE_KEY"],
       "chainId": 8453,
       "eip1559": true
     }
