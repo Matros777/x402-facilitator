@@ -4,8 +4,8 @@
   "log_level": "debug",
   "chains": {
     "eip155:8453": {
-      "rpc": "$RPC_URL_BASE",
-      "signer": "$EVM_PRIVATE_KEY",
+      "rpc": ["$RPC_URL_BASE"],
+      "signers": ["$EVM_PRIVATE_KEY"],
       "chainId": 8453,
       "eip1559": true
     }
@@ -20,5 +20,12 @@
         "require_signature": true
       }
     }
-  ]
+  ],
+  "tokens": {
+    "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913": {
+      "symbol": "USDC",
+      "decimals": 6,
+      "chain": "eip155:8453"
+    }
+  }
 }
