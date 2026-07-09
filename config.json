@@ -2,8 +2,9 @@
   "port": 8080,
   "host": "0.0.0.0",
   "log_level": "debug",
-  "chains": {
-    "eip155:8453": {
+  "chains": [
+    {
+      "id": "eip155:8453",
       "rpc": {
         "http": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr"
       },
@@ -11,7 +12,7 @@
       "chainId": 8453,
       "eip1559": true
     }
-  },
+  ],
   "schemes": [
     {
       "id": "v2-eip155-exact",
@@ -22,9 +23,5 @@
         "require_signature": true
       }
     }
-  ],
-  "facilitator": {
-    "enabled": true,
-    "default_chain": "eip155:8453"
-  }
+  ]
 }
