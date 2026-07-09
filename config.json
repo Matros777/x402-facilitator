@@ -3,7 +3,7 @@
   "host": "0.0.0.0",
   "log_level": "debug",
   "chains": {
-    "base": {
+    "eip155:8453": {
       "rpc": "https://base-mainnet.g.alchemy.com/v2/U8khpdvO0rAwu9ojyBOpr",
       "signer": "$EVM_PRIVATE_KEY",
       "chainId": 8453,
